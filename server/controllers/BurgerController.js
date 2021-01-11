@@ -15,4 +15,14 @@ export class BurgerController extends BaseController {
             next(error);
         }
     }
+
+    async create(req, res, next) {
+        try{
+            res.send(req.body);
+        }
+        catch(error){
+            next(error);
+        };
+
+    }
 }
